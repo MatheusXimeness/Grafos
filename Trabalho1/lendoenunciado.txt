@@ -1,0 +1,41 @@
+Um grafo não direcionado simples é um par ordenado G = (V, E), onde V é um conjunto não vazio de vértices, e
+E é um conjunto de pares não ordenados (u, v) onde u e v estão em V e u ̸= v. Se S for um conjunto, defina | S | 
+Enquanto o tamanho de S.
+Uma matriz de incidência M é um | V | × | E | matriz onde M (i, j) é 1 se a aresta j incide no 
+vértice i (aresta j é (i, u) ou (u, i)) e 0 caso contrário.
+Dada uma matriz n × m, pode ser uma matriz de incidência de um grafo simples não direcionado G = (V, E)
+onde | V | = n e | E | = m?
+
+ENTRADA 
+
+A primeira linha da entrada contém um inteiro t (1 ≤ t ≤ 41), o número de casos de teste.
+Cada caso de teste começa com uma linha com dois inteiros n (1 ≤ n ≤ 8) e m (0 ≤ m ≤ n (n - 1) / 2). // POIS É O NÚMERO MÁXIMO DE ARESTAS QUE UM GRAFO SIMPLES PODE TER
+Então, n linhas contendo m inteiros (0's ou 1's) seguem cada uma de modo que o j-ésimo número na i-ésima linha
+é M (i, j).
+
+SAIDA 
+
+Para cada caso de teste imprima 'Sim' se a matriz de incidência fornecida na entrada pode ser uma matriz de incidência 
+de algum grafo não direcionado simples, caso contrário imprima 'Não'.
+
+SAMPLE INPUT
+
+3
+3 3
+1 1 0
+0 1 1
+1 0 1
+3 1
+1
+1
+0
+3 3
+1 1 0
+1 1 1
+1 0 0
+
+SAMPLE OUTPUT
+
+Yes
+Yes
+No
