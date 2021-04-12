@@ -1,0 +1,72 @@
+Um grafo G é um conjunto de pontos V (G), juntamente com um conjunto de arestas
+E (G), onde cada elemento de E (G) é um par não ordenado de
+pontos distintos de V (G).
+
+Exemplo 1: Seja G um grafo onde V (G) = {a, b, c, d}
+e E (G) = {(a, b), (b, c), (c, d), (d, b)}. 
+A figura mostra uma representação de G.
+
+Observe que G contém o “ciclo”, {(b, c), (c, d), (d, b)}.
+Um grafo sem ciclos é denominado árvore. Um caminho em um
+grafo G é uma sequência alternada de pontos e arestas, (começando e terminando com um ponto) de modo que todos os pontos
+do caminho são distintos. No grafo do exemplo 1,
+{a, (a, b), b, (b, c), c, (c, d), d} é um caminho.
+
+Fato: Cada dois pontos de uma árvore são unidos por um caminho único. (POR ISSO É ÁRVORE)
+Um grafo é chamado de conexo se cada par de pontos for unido por um caminho. O grafo do exemplo 1 é
+conexo. Se um grafo não estiver conexo, ele é composto de “subgrafos” que são. Cada um desses
+os subgrafos são chamados de componentes conexos do grafo G.
+Um grafo para o qual cada componente conexo é uma árvore é chamado de floresta, veja a figura abaixo.
+
+Um caso extremo que vale a pena mencionar é o caso em que uma das árvores de componentes tem um ponto, mas
+sem bordas unidas a ele. Esta árvore gosta de um ponto isolado. Vamos chamar isso de bolota. Estamos prontos para
+defina o problema.
+Problema: Dada uma floresta, você deve escrever um programa que conta o número de árvores e bolotas.
+
+ENTRADA
+
+A primeira linha do arquivo de entrada contém o número de casos de teste que seu programa deve processar. Cada teste
+caso é uma descrição da floresta que consiste em duas partes:
+1. Uma lista de arestas da árvore, (uma por linha, dada como um par não ordenado de letras maiúsculas delimitadas
+por uma linha de asteriscos).
+2. Uma lista de pontos na árvore, (estes serão fornecidos em uma linha com um máximo de 26 correspondentes
+para as letras maiúsculas, A..Z).
+
+SAIDA
+
+Para cada caso de teste, seu programa deve imprimir o número de árvores e o número de bolotas, em um
+frase, por exemplo:
+Existem x árvore (s) ey (s) bolota (s).
+onde x e y são os números de árvores e bolotas, respectivamente.
+Notas: Uma floresta pode não ter árvores e todas as bolotas, todas as árvores e nenhuma bolota, ou qualquer coisa no meio, então
+mantenha os olhos abertos e não perca a floresta por causa das árvores!
+Exemplo 2: Seja G um gráfico cujas arestas e pontos são dados pelo primeiro caso de teste na amostra
+entrada.
+ Uma representação deste gráfico é dada na figura a seguir.
+
+ EXEMPLO DE ENTRADA
+2
+(A,B)
+(B,C)
+(B,D)
+(D,E)
+(E,F)
+(B,G)
+(G,H)
+(G,I)
+(J,K)
+(K,L)
+(K,M)
+****
+A,B,C,D,E,F,G,H,I,J,K,L,M,N
+(A,B)
+(A,C)
+(C,F)
+**
+A,B,C,D,F
+
+EXEMPLO DE SAIDA
+
+
+Existem 2 árvore (s) e 1 bolota (s).
+Existem 1 árvore (s) e 1 bolota (s).
