@@ -1,0 +1,47 @@
+Você recebe uma árvore (um gráfico simples conectado sem ciclos).
+
+Encontre o número máximo de arestas que você pode remover da árvore para obter uma floresta de forma que
+cada componente conectado da floresta contenha um número par de nós.
+
+Como exemplo, a seguinte árvore com 4 nós pode ser cortada no máximo 1 vez para criar uma floresta uniforme.
+
+Descrição da função
+
+Complete a função evenForest no editor abaixo. Ele deve retornar um número inteiro conforme descrito.
+
+evenForest tem o (s) seguinte (s) parâmetro (s):
+
+t_nodes: o número de nós na árvore
+t_edges: o número de arestas não direcionadas na árvore
+t_from: nós iniciais para cada aresta
+t_to: nós finais para cada aresta, (correspondência por índice com t_from.)
+
+ENTRADA
+
+A primeira linha de entrada contém dois inteiros tn nodes e, o número te edges  de nós e arestas.
+As próximas linhas contêm dois inteiros e que especificam nós conectados por uma aresta da árvore.
+A raiz da árvore é o nó.
+
+
+Nota: A árvore na entrada será tal que sempre pode ser decomposta em componentes contendo um número par de nós. 
+é o conjunto de inteiros pares positivos.
+
+SAIDA
+
+
+Imprima o número de bordas removidas.
+
+
+10 9
+2 1
+3 1
+4 3
+5 2
+6 1
+7 2
+8 6
+9 8
+10 8
+
+Saida:
+2
