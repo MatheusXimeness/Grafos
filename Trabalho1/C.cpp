@@ -4,16 +4,16 @@
 using namespace std;
 
 void descobreTamFloresta(){
-	string st;        // auxilia na leitura da quantidade de arestas
+	string leAresta;  // auxilia na leitura da quantidade de arestas
 	string arestas;   // auxilia na leitura da quantidade de bolotas
 	string verts;     // auxilia na leitura da quantidade de vértices
 	int nArestas = 0; // guarda o número de arestas
 	int nCC;          // guarda o número de componentes conexos
 	// ----- LEITURA ----- //
 		while(true){
-			cin >> st;
-			arestas += st;
-			if(st[0] == '*') break;
+			cin >> leAresta;
+			arestas += leAresta;
+			if(leAresta[0] == '*') break;
 			nArestas++;
 		}
 		cin >> verts;
