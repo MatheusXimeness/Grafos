@@ -1,0 +1,33 @@
+Uma empresa possui n funcionários numerados de 1 a n. Cada funcionário não tem gerente imediato ou tem exatamente 
+um gerente imediato, que é outro funcionário com um número diferente. Um funcionário A é considerado superior de outro 
+funcionário B se pelo menos um dos seguintes for verdadeiro:
+
+O funcionário A é o gerente imediato do funcionário B
+O funcionário B tem um gerente imediato, funcionário C, de modo que o funcionário A é superior ao funcionário C.
+A empresa não terá um ciclo gerencial. Ou seja, não existirá funcionário superior ao seu superior imediato.
+
+Hoje a empresa vai organizar uma festa. Isso envolve a divisão de todos os n funcionários em vários grupos: cada 
+funcionário deve pertencer a exatamente um grupo. Além disso, dentro de um único grupo, não deve haver dois funcionários 
+A e B, de modo que A seja superior a B.
+
+Qual é o número mínimo de grupos que devem ser formados?
+
+ENTRADA
+
+A primeira linha contém o inteiro n (1 ≤ n ≤ 2000) - 
+o número de funcionários.
+
+As próximas n linhas contêm os inteiros pi (1 ≤ pi ≤ n ou 
+pi = -1). Cada pi denota o gerente imediato do i-ésimo 
+
+funcionário. Se pi for -1, significa que o i-ésimo funcionário
+ não tem um gerente imediato.
+
+É garantido que nenhum funcionário será seu gerente imediato 
+(pi ≠ i). Além disso, não haverá ciclos gerenciais.
+
+SAIDA 
+
+
+Imprime um único inteiro denotando o número mínimo de grupos 
+que serão formados no partido.
