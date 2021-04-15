@@ -1,0 +1,70 @@
+Usar dinheiro para pagar bens e serviços geralmente torna a vida mais fácil, mas às vezes as pessoas preferem
+negocie itens diretamente sem nenhum dinheiro mudando de mãos. A fim de garantir um "preço" consistente, os comerciantes
+definir uma taxa de câmbio entre os itens. A taxa de câmbio entre dois itens A e B é expressa como
+dois inteiros positivos m e n, e diz que m do item A vale n do item B. Por exemplo, 2 fogões
+pode valer 3 geladeiras. (Matematicamente, 1 fogão vale 1,5 geladeiras, mas como é difícil
+para encontrar metade de uma geladeira, as taxas de câmbio são sempre expressas em números inteiros.)
+Seu trabalho é escrever um programa que, dada uma lista de taxas de câmbio, calcula a taxa de câmbio
+entre quaisquer dois itens.
+
+ENTRADA
+
+O arquivo de entrada contém um ou mais comandos, seguidos por uma linha começando com um ponto que sinaliza
+o final do arquivo. Cada comando está em uma linha por si só e é uma afirmação ou uma consulta. A
+asserção começa com um ponto de exclamação e tem o formato
+
+! m itema = n itemb
+
+onde itema e itemb são nomes de itens distintos e m e n são números inteiros positivos menores que 100.
+Este comando diz que m of itema valem n de itemb. Uma consulta começa com um ponto de interrogação, é de
+a forma
+
+? itema = itemb
+
+e pede a taxa de câmbio entre itema e itemb, onde itema e itemb são itens distintos
+que ambos apareceram em afirmações anteriores (embora não necessariamente a mesma afirmação).
+
+SAIDA
+
+Para cada consulta, imprima a taxa de câmbio entre itema e itemb com base em todas as afirmações feitas
+até esse ponto. As taxas de câmbio devem ser em números inteiros e devem ser reduzidas aos termos mais baixos. Se não houver troca
+a taxa pode ser determinada nesse ponto, use pontos de interrogação em vez de números inteiros. Formate todas as saídas exatamente
+conforme mostrado no exemplo.
+Observação:
+• Os nomes dos itens terão comprimento máximo de 20 e conterão apenas letras minúsculas.
+• Apenas a forma singular do nome de um item será usada (sem plurais).
+• Haverá no máximo 60 itens distintos.
+• Haverá no máximo uma afirmação para qualquer par de itens distintos.
+• Não haverá afirmações contraditórias. Por exemplo, “2 porco = 1 vaca”, “2 vaca = 1 cavalo” e
+“2 cavalos = 3 porcos” são contraditórios.
+• As afirmações não estão necessariamente nos termos mais baixos, mas a saída deve estar.
+• Embora as afirmações usem números menores que 100, as consultas podem resultar em números maiores que irão
+não exceder 10.000 quando reduzido para termos mais baixos.
+
+EXEMPLO DE ENTRADA
+
+
+! Camisa 6 = 15 meias
+! 47 cuecas = 9 calças
+? meia = camisa
+? camisa = calça
+! 2 meias = 1 cueca
+? pant = camisa
+
+EXEMPLO DE SAIDA
+
+5 meias = 2 camisa
+? camisa =? calça
+45 calças = camisa 188
+
+==== original entrada e saida ====
+! 6 shirt = 15 sock
+! 47 underwear = 9 pant
+? sock = shirt
+? shirt = pant
+! 2 sock = 1 underwear
+? pant = shirt
+
+5 sock = 2 shirt
+? shirt = ? pant
+45 pant = 188 shirt
