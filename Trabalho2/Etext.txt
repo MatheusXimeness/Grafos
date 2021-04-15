@@ -1,0 +1,22 @@
+Uma garra é definida como uma unha curva pontiaguda na extremidade de cada dedo do pé em pássaros, alguns
+répteis e alguns mamíferos. No entanto, se você for um entusiasta da teoria dos gráficos, você
+pode compreender a seguinte classe especial de gráfico, conforme mostrado a seguir
+figura pela palavra garra.
+Se você está mais preocupado com a terminologia da teoria dos grafos, você pode querer
+defina a garra como K1,3.
+Vamos deixar a definição por enquanto e chegar ao problema. Tu es
+dado um gráfico não direcionado simples no qual cada vértice tem grau 3. Você deve
+descobrir se o gráfico pode ser decomposto em garras ou não.
+Apenas por uma questão de clareza, a decomposição de um gráfico é uma lista de subgráficos de modo que cada aresta
+aparece exatamente em um subgráfico da lista.
+
+ENTRADA
+
+Haverá vários casos no arquivo de entrada. Cada caso começa com o número de vértices no gráfico,
+V (4 ≤ V ≤ 300). Isso é seguido por uma lista de arestas. Cada linha da lista tem dois inteiros, a e b,
+os pontos finais de uma aresta (1 ≤ a, b ≤ V). A lista de bordas termina com uma linha com um par de '0'. O fim de
+a entrada é denotada por um caso com V = 0. Este caso não deve ser processado.
+
+SAIDA 
+
+Para cada caso na entrada, imprima 'SIM' se o gráfico puder ser decomposto em garras e 'NÃO' caso contrário.

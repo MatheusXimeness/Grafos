@@ -1,0 +1,56 @@
+É o ano 95 ACM (Após a Quebra da Microsoft). Depois de muitos anos de paz, uma guerra estourou. Sua nação, a ilha de 
+Evergreen Macros And Confusing Shortcuts (EMACS), está se defendendo do império ferroviário
+governado por maquinistas com deficiência visual (VIM).
+Nos dias que antecederam a eclosão da guerra, seu governo dedicou uma grande quantidade de recursos para a coleta
+inteligência no VIM. Ele descobriu o seguinte:
+• O império possui uma grande rede de estações ferroviárias conectadas por trilhos bidirecionais.
+• Antes do início da guerra, cada estação ferroviária era conectada diretamente a no máximo 10 outras
+estações.
+• As informações são trocadas constantemente no VIM, mas, devido a uma falha de design, a única maneira que pode
+ser trocada é enviar as mensagens de trem. Antes do início da guerra, era possível
+envie uma mensagem de trem de qualquer estação para qualquer outra estação.
+• Como último recurso, o comando central do império pode enviar mensagens por pombo-correio, mas tenta
+evitar isso a todo custo, pois os únicos pombos aptos para o trabalho devem ser importados, no máximo
+despesa, da terra distante de Pigeons In Courier Outfits (PICO).
+• Depois que um pombo entrega uma mensagem a uma estação ferroviária, ele deve descansar e, portanto, não pode ser usado
+novamente. Se um pombo entregou uma mensagem de transmissão para uma estação particular, a mensagem é passada
+, se possível, de trem.
+Com base nessas informações, o governo do EMACS elaborou um plano para interromper o
+atividades do império do mal. Eles vão enviar aviões bombardeiros para bombardear as estações ferroviárias, dificultando 
+assim
+comunicações no império. Isso exigirá a aquisição de muitos pombos-correio pelo império,
+distraindo-o de suas atividades mortais durante a guerra.
+Infelizmente, seu governo gastou tanto dinheiro na coleta de inteligência que tem uma
+quantidade limitada restante para construir bombas. Como resultado, ele pode bombardear apenas um alvo. Você foi cobrado
+com a tarefa de determinar as melhores estações ferroviárias candidatas do império para bombardear, com base em suas
+“Valor pombo”.
+O "valor de pombo" de uma estação é o número mínimo de pombos que, após bombardear esta estação,
+deverá transmitir uma mensagem do comando central do império para todas as estações não bombardeadas.
+A localização do comando central do império é desconhecida, mas sabemos que não está localizado em uma ferrovia
+estação. Isso implica que, quando o comando central precisa enviar uma mensagem para algum não bombardeado
+estação eles têm que usar pelo menos um pombo e então a mensagem pode ser posteriormente transmitida pelo
+estrada de ferro.
+
+ENTRADA
+
+O arquivo de entrada contém vários casos de teste. Os dados para cada caso começam com uma linha contendo o
+a seguir dois inteiros:
+• n o número de estações ferroviárias no império (3 ≤ n ≤ 10000). As estações serão numeradas
+começando de 0, até n - 1
+• m o número de estações a serem identificadas como alvos de bombardeio candidatos (1 ≤ m ≤ n).
+
+As próximas linhas consistem em pares de inteiros. Cada par (x, y) indica a presença de um bidirecional
+linha ferroviária conectando as estações ferroviárias x e y. Esta sequência é terminada por uma linha contendo dois
+menos 1 conforme mostrado na entrada de amostra.
+A entrada é encerrada por um caso em que o valor de n = m = 0. Este caso não deve ser processado.
+
+SAIDA
+
+Para cada caso de entrada, a saída deve fornecer as estações ferroviárias mais desejáveis ​​para bombardear. Deveria
+ser exatamente m linhas, cada uma com dois inteiros separados por um único espaço. O primeiro inteiro em cada linha irá
+será o número de uma estação ferroviária, e o segundo será o “valor pombo” da estação. Esta lista
+deve ser classificado, primeiro por "valor de pombo", em ordem decrescente, e dentro do mesmo "valor de pombo" por
+números das estações ferroviárias, em ordem crescente. Imprima uma linha em branco após a saída para cada conjunto de 
+entrada.
+
+VER EXEMPLOS NO VJUDGE

@@ -1,0 +1,40 @@
+Bob é um fazendeiro. Ele tem um grande pasto com muitas ovelhas. Recentemente, ele perdeu alguns deles devido 
+a ataques de lobos. Ele então decidiu colocar alguns cães pastores de forma que todas as suas ovelhas fossem protegidas.
+
+A pastagem é um retângulo que consiste em células R × C. Cada célula está vazia, contém uma ovelha, um lobo ou um 
+cachorro. Ovelhas e cães sempre ficam no lugar, mas os lobos podem vagar livremente pelo pasto, movendo-se 
+repetidamente para a esquerda, direita, para cima ou para baixo para uma cela vizinha. Quando um lobo entra em uma cela 
+com uma ovelha, ele a consome. No entanto, nenhum lobo pode entrar em uma cela com um cachorro.
+
+Inicialmente não há cães. Coloque os cães no pasto de forma que nenhum lobo possa alcançar qualquer ovelha, ou 
+determine que seja impossível. Observe que, como você tem muitos cães, não é necessário minimizar o número deles.
+
+ENTRADA 
+
+A primeira linha contém dois inteiros R (1 ≤ R ≤ 500) e C (1 ≤ C ≤ 500), denotando o número de linhas e o 
+número de colunas, respectivamente.
+
+Cada uma das linhas R a seguir é uma seqüência de caracteres exatamente C, representando uma linha do pasto.
+Aqui, 'S' significa uma ovelha, 'W' um lobo e '.' uma célula vazia.
+
+SAIDA
+
+Se for impossível proteger todas as ovelhas, imprima uma única linha com a palavra "Não".
+
+Caso contrário, imprima uma linha com a palavra "Sim". Em seguida, imprima linhas R, representando a pastagem 
+após a colocação dos cães. Novamente, 'S' significa uma ovelha, 'W' um lobo, 'D' é um cachorro e '.' um espaço vazio.
+Você não tem permissão para mover, remover ou adicionar uma ovelha ou um lobo.
+
+Se houver várias soluções, você pode imprimir qualquer uma delas. Você não precisa minimizar o número de cães.
+
+OLHAR EXEMPLOS NO VJUDGE
+
+NOTAS
+
+No primeiro exemplo, podemos dividir o pasto em duas metades, uma contendo lobos e outra contendo ovelhas.
+Observe que a ovelha em (2,1) está segura, pois os lobos não podem se mover na diagonal.
+
+No segundo exemplo, não há locais vazios para colocar cães que guardariam as ovelhas solitárias.
+
+No terceiro exemplo, não há lobos, então a tarefa é muito fácil. Colocamos um cachorro no centro para observar a
+tranquilidade da campina, mas a solução estaria correta mesmo sem ele.
