@@ -1,4 +1,4 @@
-Joe trabalha em um labirinto. Infelizmente, partes do labirinto têm
+Joe trabalha em um labirinto. Infelizmente, partes do labirinto
 pegou fogo, e o dono do labirinto se esqueceu de criar um
 plano de fuga. Ajude Joe a escapar do labirinto.
 Dada a localização de Joe no labirinto e quais quadrados do labirinto
@@ -18,7 +18,7 @@ inteiros R e C, separados por espaços, com 1 ≤ R, C ≤ 1000.
 As linhas R seguintes do caso de teste, cada uma contém uma linha do labirinto. Cada uma dessas linhas contém exatamente
 Caracteres C, e cada um desses caracteres é um dos seguintes:
 • #, uma parede
-•., Um quadrado transitável
+•.,  Um quadrado transitável
 • J, a posição inicial de Joe no labirinto, que é um quadrado transitável
 • F, um quadrado que está pegando fogo
 Haverá exatamente um J em cada caso de teste
