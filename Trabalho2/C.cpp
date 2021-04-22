@@ -20,7 +20,7 @@ void bfsFogo( vector<pair<int,int>> posFogo, int R, int C, vector<vector<char>> 
         vertice.second = fila.front().second; 
         fila.pop( ); 
 
-        //visitaVertice() não sei se é necessário
+        //visitaVertice() não sei se é necessário 
         // ----- Para todos os vizinhos ----- //    
             if( vertice.first+1 < R ) {
                 if( visitadosPorFogo[ vertice.first+1 ][ vertice.second ] == 0 && Labirinto[ vertice.first+1 ][ vertice.second ] != '#' ) {  // se tiver tempo 0 e não for parede
