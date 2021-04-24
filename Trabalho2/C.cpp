@@ -20,7 +20,6 @@ void bfsFogo( vector<pair<int,int>> posFogo, int R, int C, vector<vector<char>> 
         vertice.second = fila.front().second; 
         fila.pop( ); 
 
-        //visitaVertice() não sei se é necessário 
         // ----- Para todos os vizinhos ----- //    
             if( vertice.first+1 < R ) {
                 if( visitadosPorFogo[ vertice.first+1 ][ vertice.second ] == 0 && Labirinto[ vertice.first+1 ][ vertice.second ] != '#' ) {  // se tiver tempo 0 e não for parede
@@ -87,88 +86,58 @@ int bfsJoe(int posJoeI, int posJoeJ, int R, int C, vector<vector<char>> &Labirin
         vertice.second = fila.front().second; 
         fila.pop( ); 
 
-        //visitaVertice() não sei se é necessário
+        if ( ( vertice.first == 0 || vertice.first == R-1 || vertice.second == 0 || vertice.second == C-1 ) 
+        && ( visitadosPorJoe[ vertice.first ][ vertice.second ] < visitadosPorFogo[ vertice.first ][ vertice.second ] || visitadosPorFogo[ vertice.first ][ vertice.second ] == 0 )){
+            return visitadosPorJoe[ vertice.first ][ vertice.second ] + 1;
+        }
+
+
         // ----- Para todos os vizinhos ----- //    
             if( vertice.first+1 < R ) {
-                if( visitadosPorJoe[ vertice.first+1 ][ vertice.second ] == 0 && Labirinto[ vertice.first+1 ][ vertice.second ] != '#' ) {  // se tiver tempo 0 e não for parede
-                    if( Labirinto[ vertice.first+1 ][ vertice.second ] == '.' && Labirinto[ vertice.first+1 ][ vertice.second ]  != 'F' ) {  // se for igual a espaço vazio e diferente de fogo
-                        if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first+1 ][ vertice.second ] ){ // se a posição que o Joe está for maior que a posição que eu desejo entrar, se for menor não precisa 
+                if( visitadosPorJoe[ vertice.first+1 ][ vertice.second ] == 0 && Labirinto[ vertice.first+1 ][ vertice.second ] == '.' 
+                && ( visitadosPorJoe[ vertice.first+1 ][ vertice.second ] < visitadosPorFogo[ vertice.first+1 ][ vertice.second ] || visitadosPorFogo[ vertice.first+1 ][ vertice.second ] == 0 ) ) {
+                    if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first+1 ][ vertice.second ] ){ // se a posição que o Joe está for maior que a posição que eu desejo entrar, se for menor não precisa 
                             visitadosPorJoe[ vertice.first+1 ][ vertice.second ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1; // então eu somo o que eu tinha com mais um
 
                             fila.push( make_pair( vertice.first+1 , vertice.second ) ); // add na fila, pois ainda não foi visitado
                         }
-                    }
-                    // ------------- Junção ------------ //
-                    if( visitadosPorJoe[ vertice.first+1 ][ vertice.second ] < visitadosPorFogo[ vertice.first+1 ][ vertice.second ] ) {  // se o tempo do Joe for menor que o fogo e diferente de parede
-                        if( vertice.first+1 == R-1 ) {  // se pude chegar no limite
-                            return visitadosPorJoe[ vertice.first+1 ][ vertice.second ] +1;   
-                        } 
-                    } 
-                // -------------  -------------- //
                 }
             }
-
+            
             if( vertice.first-1 >= 0 ) {
-                if( visitadosPorJoe[ vertice.first-1 ][ vertice.second ] == 0 && Labirinto[ vertice.first-1 ][ vertice.second ] != '#') {
-                    if( Labirinto[ vertice.first-1 ][ vertice.second ] == '.' && Labirinto[ vertice.first-1 ][ vertice.second ] != 'F' ) {
-                        if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first-1 ][ vertice.second ] ){
-                            visitadosPorJoe[ vertice.first-1 ][ vertice.second ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1;
+                if( visitadosPorJoe[ vertice.first-1 ][ vertice.second ] == 0 && Labirinto[ vertice.first-1 ][ vertice.second ] == '.' 
+                && ( visitadosPorJoe[ vertice.first-1 ][ vertice.second ] < visitadosPorFogo[ vertice.first-1 ][ vertice.second ] || visitadosPorFogo[ vertice.first-1 ][ vertice.second ] == 0 ) ) {
+                    if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first-1 ][ vertice.second ] ){ // se a posição que o Joe está for maior que a posição que eu desejo entrar, se for menor não precisa 
+                            visitadosPorJoe[ vertice.first-1 ][ vertice.second ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1; // então eu somo o que eu tinha com mais um
 
-                            fila.push( make_pair( vertice.first-1 , vertice.second ) );
+                            fila.push( make_pair( vertice.first-1 , vertice.second ) ); // add na fila, pois ainda não foi visitado
                         }
-                    }
-                     // ------------- Junção ------------ //
-
-                    if( visitadosPorJoe[ vertice.first-1 ][ vertice.second ] < visitadosPorFogo[ vertice.first-1 ][ vertice.second ] ) {  // se o tempo do Joe for menor que o fogo e diferente de parede
-                        if( vertice.first-1 == 0 ) {  // se pude chegar no limite
-                            return visitadosPorJoe[ vertice.first-1 ][ vertice.second ] +1;   
-                        } 
-                    }
-                // -------------  -------------- // 
                 }
-
             }
+
+            
             if( vertice.second+1 < C ) {
-                if( visitadosPorJoe[ vertice.first  ][ vertice.second+1 ] == 0 && Labirinto[ vertice.first ][ vertice.second+1 ] != '#') {
-                    if( Labirinto[ vertice.first  ][ vertice.second+1 ] == '.' && Labirinto[ vertice.first ][ vertice.second+1 ] != 'F' ) {
-                        if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first ][ vertice.second+1 ] ) {
-                            visitadosPorJoe[ vertice.first ][ vertice.second+1 ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1;
+                if( visitadosPorJoe[ vertice.first ][ vertice.second+1 ] == 0 && Labirinto[ vertice.first ][ vertice.second+1 ] == '.' 
+                && ( visitadosPorJoe[ vertice.first ][ vertice.second+1 ] < visitadosPorFogo[ vertice.first ][ vertice.second+1 ] || visitadosPorFogo[ vertice.first ][ vertice.second+1 ] == 0 ) ) {
+                    if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first ][ vertice.second+1 ] ){ // se a posição que o Joe está for maior que a posição que eu desejo entrar, se for menor não precisa 
+                            visitadosPorJoe[ vertice.first ][ vertice.second+1 ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1; // então eu somo o que eu tinha com mais um
 
-                            fila.push( make_pair( vertice.first  , vertice.second+1 ) );
+                            fila.push( make_pair( vertice.first , vertice.second+1 ) ); // add na fila, pois ainda não foi visitado
                         }
-                    }
-                    // ------------- Junção ------------ //
-
-                    if( visitadosPorJoe[ vertice.first ][ vertice.second+1 ] < visitadosPorFogo[ vertice.first ][ vertice.second+1 ] ) {  // se o tempo do Joe for menor que o fogo e diferente de parede                       
-                        if( vertice.second+1 == C-1 ) {  // se pude chegar no limite                          
-                            return visitadosPorJoe[ vertice.first ][ vertice.second+1 ] +1;   
-                        } 
-                    }
-                // -------------  -------------- // 
                 }
-                
             }
+                
+            
             if( vertice.second-1 >= 0 ) {
-                if( visitadosPorJoe[ vertice.first ][ vertice.second-1 ] == 0 && Labirinto[ vertice.first ][ vertice.second-1 ] != '#') {
-                    if( Labirinto[ vertice.first  ][ vertice.second-1 ] == '.' && Labirinto[ vertice.first  ][ vertice.second-1 ] != 'F' ) {
-                        if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first ][ vertice.second-1 ] ) {    
-                            visitadosPorJoe[ vertice.first ][ vertice.second-1 ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1;
+                if( visitadosPorJoe[ vertice.first ][ vertice.second-1 ] == 0 && Labirinto[ vertice.first ][ vertice.second-1 ] == '.' 
+                && ( visitadosPorJoe[ vertice.first ][ vertice.second-1 ] < visitadosPorFogo[ vertice.first ][ vertice.second-1 ] || visitadosPorFogo[ vertice.first ][ vertice.second-1 ] == 0 ) ) {
+                    if ( visitadosPorJoe[ vertice.first ][ vertice.second ] >= visitadosPorJoe[ vertice.first ][ vertice.second-1 ] ){ // se a posição que o Joe está for maior que a posição que eu desejo entrar, se for menor não precisa 
+                            visitadosPorJoe[ vertice.first ][ vertice.second-1 ] = visitadosPorJoe[ vertice.first ][ vertice.second ] + 1; // então eu somo o que eu tinha com mais um
 
-                            fila.push( make_pair( vertice.first  , vertice.second-1 ) );
+                            fila.push( make_pair( vertice.first , vertice.second-1 ) ); // add na fila, pois ainda não foi visitado
                         }
-                    }
-                     // ------------- Junção ------------ //
-
-                    if( visitadosPorJoe[ vertice.first ][ vertice.second-1 ] < visitadosPorFogo[ vertice.first ][ vertice.second-1 ] ) {  // se o tempo do Joe for menor que o fogo e diferente de parede                      
-                        if( vertice.second-1 == 0) {  // se pude chegar no limite
-                            return visitadosPorJoe[ vertice.first ][ vertice.second-1 ] +1;   
-                        }
-                    }
-                
-                // -------------  -------------- //
-                }              
+                } 
             }
-        // ----- ------ //    
     }
     return 0;
 }
@@ -211,23 +180,28 @@ void solve(int R, int C){
         int resposta = bfsJoe ( posJoe.first, posJoe.second, R, C, Labirinto, visitadosPorJoe, visitadosPorFogo, visitados );
     // ----- ----- //
 
-    // ----- Teste para ver se os tempos foram inseridos corretamente ----- //    
-        /*for(int i = 0 ; i < R ; i++){
-            for(int j = 0; j < C ; j++){
-                cout << visitadosPorFogo[i][j]; || cout << visitadosPorJoe[i][j]; 
-            }    
-            cout << endl;
-        }*/
-    // ----- ----- //
-
-    
-    //int resposta = bfsComparaMomentos( posJoe.first, posJoe.second, R, C, visitadosPorJoe, visitadosPorFogo, visitados, Labirinto );
     if( resposta > 0 ) {
         cout << resposta << endl;
     } else {
         cout << "IMPOSSIBLE" << endl;
     }
 
+    // ----- Teste para ver se os tempos foram inseridos corretamente ----- //    
+        /*cout << "Fogo" << endl;
+        for(int i = 0 ; i < R ; i++){
+            for(int j = 0; j < C ; j++){
+                cout << visitadosPorFogo[i][j];
+            }    
+            cout << endl;
+        }
+        cout << endl << "Joe" << endl;
+         for(int i = 0 ; i < R ; i++){
+            for(int j = 0; j < C ; j++){
+               cout << visitadosPorJoe[i][j]; 
+            }    
+            cout << endl;
+        }*/
+    // ----- ----- //
 }
 
 int main(){
