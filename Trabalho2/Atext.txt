@@ -1,5 +1,5 @@
 Usar dinheiro para pagar bens e serviços geralmente torna a vida mais fácil, mas às vezes as pessoas preferem
-negocie itens diretamente sem nenhum dinheiro mudando de mãos. A fim de garantir um "preço" consistente, os comerciantes
+negociar itens diretamente sem nenhum dinheiro mudando de mãos. A fim de garantir um "preço" consistente, os comerciantes
 definir uma taxa de câmbio entre os itens. A taxa de câmbio entre dois itens A e B é expressa como
 dois inteiros positivos m e n, e diz que m do item A vale n do item B. Por exemplo, 2 fogões
 pode valer 3 geladeiras. (Matematicamente, 1 fogão vale 1,5 geladeiras, mas como é difícil
