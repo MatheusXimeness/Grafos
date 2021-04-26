@@ -1,0 +1,1 @@
+// pergunta antes da afirmação
