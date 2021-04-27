@@ -1,0 +1,45 @@
+Alex tem um quebra-cabeça que seu pai lhe deu no último Natal. Possui nove quadrados numerados dispostos 
+em um formato 3 × 3
+matriz (três linhas e três colunas) e é mecanicamente projetada para permitir os seguintes tipos de
+movimentos:
+• Um movimento horizontal para a direita muda uma posição para a direita de cada um dos quadrados na
+linha horizontal (circular).
+• Um movimento vertical para cima muda uma posição para cima de cada um dos quadrados na vertical correspondente
+coluna (circularmente).
+O irmãozinho encrenqueiro de Alex, Jim, escapuliu ontem à noite para o quarto de sua irmã e de alguma forma rasgou
+desmontar o quebra-cabeça e montá-lo novamente. No entanto, quando Jim montou o quebra-cabeça de volta, ele pode
+fiz isso em uma configuração diferente da configuração original do quebra-cabeça.
+Na manhã seguinte, quando Alex descobriu que seu quebra-cabeça havia sido embaralhado, ela ligou para você para 
+ajudá-la a redefinir seu quebra-cabeça para sua configuração original (mostrado abaixo) o mais rápido possível, 
+para que seu pai não perceber que o quebra-cabeça foi rasgado e embaralhado. 
+Claro, você deve fazer isso usando apenas movimentos válidos, conforme descrito acima.
+
+IMAGEM NO PDF
+
+Sua tarefa é escrever um programa que, dada uma configuração, encontre uma maneira de definir o quebra-cabeça 
+para seu
+configuração original gastando o número mínimo possível de movimentos para realizá-la, se o dado
+quebra-cabeça é solucionável. Se não for esse o caso, o programa deve indicá-lo.
+
+ENTRADA
+A entrada do problema consiste em vários casos, cada um definido por três linhas que descrevem um quebra-cabeça
+configuração. Ou seja, as linhas correspondem a uma descrição de cima para baixo das linhas da configuração fornecida,
+e cada linha consiste em três dígitos, separados por um caractere em branco.
+O final da entrada é indicado por uma linha com um número '0'.
+
+SAIDA
+
+Para cada quebra-cabeça na entrada, você deve imprimir uma linha contendo S, o número mínimo de movimentos
+necessários
+para colocar o quebra-cabeça em sua configuração original, seguido por um espaço e 2 caracteres S indicando qualquer
+sequência de movimentos S que resolve o quebra-cabeça.
+Um movimento é descrito por dois personagens: o primeiro deve ser ‘H’ ou ‘V’ (H especifica um movimento horizontal,
+e V um movimento vertical), e o segundo deve ser ‘1’, ‘2’ ou ‘3’ para indicar a linha ou coluna para
+mover.
+Se o quebra-cabeça não puder ser resolvido, você deve produzir uma linha com o texto ‘Não resolvível’.
+
+EXEMPLO DE SAIDA
+
+1 H1
+3 V1V3H1
+Not solvable
