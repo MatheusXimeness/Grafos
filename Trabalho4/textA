@@ -1,0 +1,26 @@
+Em um episódio do programa Dick Van Dyke, o pequeno Richie conecta as sardas nas costas de seu pai para formar um
+imagem do Liberty Bell. Infelizmente, uma das sardas acabou por ser uma cicatriz, então seu noivado de Ripley
+cai.
+Considere as costas de Dick como um avião com sardas em vários locais (x, y). Seu trabalho é dizer a Richie
+como conectar os pontos para minimizar a quantidade de tinta usada. Richie conecta os pontos desenhando
+linhas retas entre pares, possivelmente levantando a caneta entre as linhas. Quando Richie terminar, deve haver
+uma sequência de linhas conectadas de qualquer sarda a qualquer outra sarda
+
+ENTRADA
+
+A entrada começa com um único inteiro positivo em uma linha indicando o número de casos
+a seguir, cada um deles conforme descrito abaixo. Esta linha é seguida por uma linha em branco e também há um
+linha em branco entre duas entradas consecutivas.
+A primeira linha contém 0 <n ≤ 100, o número de sardas nas costas de Dick. Para cada sarda, uma linha
+segue; cada linha seguinte contém dois números reais indicando as coordenadas (x, y) da sarda.
+
+SAIDA
+
+Para cada caso de teste, a saída deve seguir a descrição abaixo. As saídas de dois casos consecutivos
+será separado por uma linha em branco.
+Seu programa imprime um único número real com duas casas decimais: o comprimento total mínimo de tinta
+linhas que podem conectar todas as sardas.
+
+SAIDA ESPERADA
+
+3.41
