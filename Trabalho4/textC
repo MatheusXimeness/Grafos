@@ -1,0 +1,31 @@
+“Arnie Pie no céu com o trajeto matinal.
+O tráfego esta manhã está pior do que nunca. Devido a
+um incêndio no laboratório de testes do exército, um bando de escapou,
+mokeys infectados estão vagando pela via expressa. Apesar de
+o calor sufocante, não desenrole suas janelas
+Porque aqueles macacos parecem confusos e irritáveis. "
+Arnie Pie, "Os Simpsons".
+
+Uma cidade tem n interseções e m estradas bidirecionais conectando pares de interseções. Cada estrada
+tem uma certa capacidade de fluxo de tráfego, medida em carros por minuto. Existe um caminho em cada cruzamento
+a todas as outras interseções ao longo de alguma sequência de estradas. O departamento de manutenção de estradas acabou
+orçamento e precisa fechar tantas estradas quanto possível sem desconectar quaisquer cruzamentos. Eles
+deseja fazê-lo de tal forma que a capacidade mínima entre todas as estradas restantes seja tão grande quanto
+possível
+
+ENTRADA
+
+A primeira linha de entrada fornece o número de casos, N. N casos de teste seguem. Cada um começa com uma linha
+contendo n (0 <n ≤ 100) e m (0 <m ≤ 10000). As próximas m linhas descreverão as m estradas, cada
+um usando 3 inteiros, u, v e c (0 ≤ u, v <n), (0 <c ≤ 1000). u e v são os pontos finais da estrada
+e c é a sua capacidade
+
+SAIDA
+
+Para cada caso de teste, imprima uma linha contendo ‘Caso #x:’ seguido pela capacidade da estrada de capacidade 
+mínima restante.
+
+SAIDA ESPERADA 
+
+Case #1: 20
+Case #2: 3
