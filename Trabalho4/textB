@@ -1,0 +1,39 @@
+No país de Graphland, existem muitas cidades, mas nenhuma estrada. O governo federal quer
+mudar essa situação e planeja construir estradas e ferrovias de forma que todas as cidades do país sejam
+conectado através deste novo sistema de transporte. Para tornar o novo sistema mais eficiente, Graphland
+construirá apenas estradas entre cidades dentro do mesmo estado e usará ferrovias para conectar cidades que
+estão em estados diferentes. Para efeitos deste problema, considere que se a distância entre qualquer
+duas cidades são no máximo r então elas estão no mesmo estado. Para minimizar os custos de construção de estradas
+e ferrovias, o governo também quer construir apenas a extensão mínima necessária de estradas e
+ferrovias, de modo que haja um caminho entre qualquer par de cidades em todo o país. Você foi contratado
+para determinar qual é o sistema de rede de transporte ideal que a Graphland deve construir.
+A primeira linha da entrada contém o número de casos de teste que se seguem. Na primeira linha de cada
+caso de teste, haverá dois inteiros, n (1 ≤ n ≤ 1000), o número de cidades que compõem Graphland,
+e r (0 ≤ r ≤ 40000), o valor limite para determinar se duas cidades estão no mesmo estado. No
+seguindo n linhas, haverá uma lista de coordenadas inteiras x - y (−10000 ≤ x, y ≤ 10000) no plano
+para cada cidade em Graphland. Seu programa deve produzir o número de estados em Graphland e o
+extensão mínima (arredondada para o número inteiro mais próximo) de estradas e ferrovias que devem ser construídas
+para satisfazer as condições do projeto.
+
+ENTRADA
+
+A primeira linha de entrada fornece o número de casos, T (1 ≤ T ≤ 20). Seguem-se casos de teste T. No primeiro
+linha de cada caso de teste, haverá dois inteiros, n (1 ≤ n ≤ 1000), o número de cidades que compõem
+Graphland er (0 ≤ r ≤ 40000), o valor limite para determinar se duas cidades estão no mesmo estado.
+Nas próximas n linhas, haverá uma lista de coordenadas inteiras x - y (−10000 ≤ x, y ≤ 10000) em
+o plano para cada cidade em Graphland.
+
+SAIDA
+
+A saída é composta por uma linha para cada conjunto de dados de entrada. A linha identifica o conjunto de dados com um
+número (começando de um e incrementando a cada novo conjunto de dados), seguido pelo número de estados
+em Graphland e a extensão mínima (arredondado para o número inteiro mais próximo) de ambas as estradas e ferrovias
+que deve ser construído para satisfazer as condições do projeto.
+Nota: Observe que, pela definição, se A e B estão no mesmo estado, e B e C estão no mesmo
+estado, então A e C também estão no mesmo estado.
+
+SAIDA ESPERADA
+
+Case #1: 1 2 0
+Case #2: 3 0 200
+Case #3: 2 24 28
