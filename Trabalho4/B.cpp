@@ -73,11 +73,6 @@ void solve ( int casoTeste )
         posCidades[i].first = x; 
         posCidades[i].second = y;
     }
-    
-    /*for ( int i = 0 ; i < numCidade ; i++ )
-    {
-        cout <<  posCidades[i].first << ", " <<  posCidades[i].second << endl;
-    }*/
 
     pair<int, int> cidade1;
     pair<int, int> cidade2;

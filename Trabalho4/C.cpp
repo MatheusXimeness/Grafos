@@ -3,13 +3,6 @@
 #include <algorithm>
 using namespace std;
 
- /* 
-cout << casoTeste << endl;
-cout << intersecoes << " " << estradas << endl;
-for ( int i = 0 ; i < estradas ; i++ ) {
-    cout << roads[i].u << " " << roads[i].v << " " <<  roads[i].capMax << endl;
-}
-*/
 
 class UnionFind 
 {

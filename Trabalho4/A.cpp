@@ -1,5 +1,3 @@
-//Problema de árvore geradora mínima!!
-//Dúvida a respeito de como a saída será calculada
 #include <iostream>
 #include <string>
 #include <vector>
@@ -123,8 +121,6 @@ int main()
     
     for ( int i = 0 ; i < numCasos ; i++ ) 
     {
-        //string barraN;
-        //cin >> barraN; // lê linha vazia
         solve();
         if( i != numCasos-1)
             cout << "\n";
