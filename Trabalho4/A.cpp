@@ -11,35 +11,35 @@ using namespace std;
 class UnionFind 
 {
     private:
-        vector<int> pai;
+        vector<double> pai;
     public:
-        void createSet ( int tam )
+        void createSet ( double tam )
         {
-            pai = vector<int>(tam);
+            pai = vector<double>(tam);
             for ( int i = 0 ; i < tam ; i++ ) 
             {
                 pai[i] = i;
             }
         }
 
-        int findSet ( int elemento )
+        int findSet ( double elemento )
         {
             if ( pai[elemento] == elemento )
             {
                 return elemento;
             }
             // descobre quem é o representante de elem
-            int representanteElem = findSet ( pai[elemento] );
+            double representanteElem = findSet ( pai[elemento] );
             pai[elemento] = representanteElem;
             return representanteElem;
         }
 
-        void mergeSets ( int i, int j )
+        void mergeSets ( double i, double j )
         {
             pai [ findSet( i ) ] = findSet( j ); // o pai do elemento que eu quero juntar, recebe o pai do que vai ser juntado
         }
 
-        bool isSameSet ( int i, int j )
+        bool isSameSet ( double i, double j )
         {
             return findSet( i ) == findSet( j );
         }
@@ -86,6 +86,8 @@ void solve ()
     pair<double, double> sarda1;
     pair<double, double> sarda2;
     
+
+    // ----- Colocando as distâncias das arestas ----- //
     for ( double i = 0 ; i < numSardas ; i++ ) {
         for ( double j = i+1 ; j < numSardas ; j++ ) 
         {
@@ -96,16 +98,23 @@ void solve ()
             arestas.push_back( e );
         }
     }
+    // ----- ----- //
+
     sort( arestas.begin(), arestas.end() );
 
     UnionFind conjuntos;
-    conjuntos.createSet( numSardas )
+    conjuntos.createSet( numSardas );
 
+    double resposta = 0;
     for ( const Edges &e:arestas ) 
     {
-        if ( !isSameSet( e.u, e.v ) )
+        if ( !conjuntos.isSameSet( e.u, e.v ) )
+        {
+            conjuntos.mergeSets( e.u, e.v );
+            resposta += e.distXY;
+        }
     }
-
+    cout << fixed << setprecision(2) << resposta << "\n";
 }
 
 int main() 
@@ -117,6 +126,8 @@ int main()
         //string barraN;
         //cin >> barraN; // lê linha vazia
         solve();
+        if( i != numCasos-1)
+            cout << "\n";
     }
     
     return 0;
