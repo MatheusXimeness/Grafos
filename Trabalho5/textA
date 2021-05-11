@@ -1,0 +1,32 @@
+A Big Johnsson Trucks Inc. é uma empresa especializada na fabricação de grandes caminhões. Seu último modelo,
+o Godzilla V12, é tão grande que a quantidade de carga que você pode transportar nunca é limitada pelo
+caminhão em si. É limitado apenas pelas restrições de peso que se aplicam às estradas ao longo do caminho que você
+quer dirigir.
+Com base na cidade de início e de destino, seu trabalho é determinar a carga máxima do Godzilla V12
+de modo que ainda existe um caminho entre as duas cidades especificadas.
+
+ENTRADA
+
+O arquivo de entrada conterá um ou mais casos de teste. A primeira linha de cada caso de teste conterá dois
+inteiros: o número de cidades n (2 ≤ n ≤ 200) e o número de segmentos de estrada r (1 ≤ r ≤ 19900)
+constituindo a rede viária.
+Em seguida, r linhas seguirão, cada uma descrevendo um segmento de estrada nomeando as duas cidades conectadas
+pelo segmento e dando o limite de peso para os caminhões que utilizam este segmento. Nomes não são mais longos
+mais de 30 caracteres e não contêm caracteres de espaço em branco. Os limites de peso são inteiros no intervalo
+0..10000. As estradas sempre podem ser percorridas em ambas as direções.
+A última linha do caso de teste contém dois nomes de cidades: início e destino.
+A entrada será encerrada por dois valores de 0 para n e r
+
+SAIDA 
+
+Para cada caso de teste, imprima três linhas:
+• uma linha dizendo ‘Cenário #x’ onde x é o número do caso de teste
+• uma linha dizendo ‘y toneladas” onde y é a carga máxima possível
+• uma linha em branco
+
+EXEMPLO DE SAIDA
+
+Scenario #1
+80 tons
+Scenario #2
+170 tons

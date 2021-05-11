@@ -1,0 +1,35 @@
+Um grupo de formigas fica muito orgulhoso porque construiu uma colônia grande e magnífica. No entanto, o
+tamanho enorme se tornou um problema, porque muitas formigas não sabem o caminho entre algumas partes do
+a colônia. Eles precisam desesperadamente de sua ajuda!
+A colônia de formigas foi formada por uma série de N formigueiros, conectados por túneis. As formigas, obsessivas
+como são, numeraram os formigueiros sequencialmente à medida que os construíam. O primeiro formigueiro, numerado 0, fez
+não requerem qualquer túnel, mas para cada um dos formigueiros subsequentes, 1 a N - 1, as formigas também construíram um
+único túnel que conectava o novo formigueiro a um dos formigueiros existentes. Claro, este túnel era
+o suficiente para permitir que qualquer formiga vá para qualquer formigueiro previamente construído, possivelmente passando por outros formigueiros
+em seu caminho, então eles não se preocuparam em fazer túneis extras e continuaram construindo mais formigueiros.
+Seu trabalho é, dada a estrutura da colônia e um conjunto de consultas, calcular para cada consulta o
+caminho mais curto entre pares de formigueiros. O comprimento de um caminho é a soma dos comprimentos de todos os túneis
+que precisam ser percorridos.
+
+ENTRADA
+
+Cada caso de teste é fornecido usando várias linhas. A primeira linha contém um inteiro N representando o número
+de formigueiros na colônia (2 ≤ N ≤ 105 ) Cada uma das próximas N −1 linhas contém dois inteiros que descrevem
+um tunel. Linha i, para 1 ≤ i ≤ N −1, contém Ai e Li, indicando que formigueiro eu estava conectado diretamente
+para o formigueiro Ai com um túnel de comprimento Li (0 ≤ Ai ≤ i - 1 e 1 ≤ Li ≤ 109) A próxima linha contém
+um inteiro Q representando o número de consultas que se seguem (1 ≤ Q ≤ 105) Cada um dos próximos Q
+linhas descreve uma consulta e contém dois inteiros distintos S e T (0 ≤ S, T ≤ N - 1), representando
+respectivamente os formigueiros de origem e de destino.
+O último caso de teste é seguido por uma linha contendo um zero.
+
+SAIDA
+
+Para cada caso de teste, imprima uma única linha com Q inteiros, cada um deles sendo o comprimento de um caminho mais curto
+entre o par de formigueiros de uma consulta. Escreva os resultados para cada consulta na mesma ordem que o
+consultas foram fornecidas na entrada.
+
+EXEMPLO DE SAIDA
+
+16 20 11 17
+1 1
+5000000000

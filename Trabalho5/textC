@@ -1,0 +1,40 @@
+No ano de 2163, foram descobertos buracos de minhoca. Um buraco de minhoca é um túnel subespacial através do espaço e do tempo
+conectando dois sistemas estelares. Os buracos de minhoca têm algumas propriedades peculiares:
+• Os buracos de minhoca são unilaterais.
+• O tempo que leva para viajar por um buraco de minhoca é insignificante.
+• Um buraco de minhoca tem dois pontos finais, cada um situado em um sistema estelar.
+• Um sistema estelar pode ter mais de um ponto final de buraco de minhoca dentro de seus limites.
+• Por alguma razão desconhecida, a partir de nosso sistema solar, é sempre possível acabar em qualquer
+sistema estelar seguindo uma sequência de buracos de minhoca (talvez a Terra seja o centro do universo).
+• Entre qualquer par de sistemas estelares, existe no máximo um buraco de minhoca em qualquer direção.
+• Não há buracos de minhoca com ambas as extremidades no mesmo sistema estelar.
+Todos os buracos de minhoca têm uma diferença de tempo constante entre seus pontos finais. Por exemplo, um específico
+O buraco de minhoca pode fazer com que a pessoa que viaja por ele termine 15 anos no futuro. Outro buraco de minhoca
+pode fazer com que a pessoa termine 42 anos atrás.
+Um físico brilhante, que vive na Terra, quer usar buracos de minhoca para estudar o Big Bang. Desde warp
+impulso ainda não foi inventado, não é possível para ela viajar de um sistema estelar para outro
+diretamente. Isso pode ser feito usando buracos de minhoca, é claro.
+O cientista quer alcançar um ciclo de buracos de minhoca em algum lugar do universo que faz com que ela acabe
+no passado. Ao viajar ao longo deste ciclo muitas vezes, o cientista é capaz de voltar tão longe em
+o tempo necessário para chegar ao início do universo e ver o Big Bang com seus próprios olhos. Escreva
+um programa para descobrir se esse ciclo existe
+
+ENTRADA
+
+O arquivo de entrada começa com uma linha contendo o número de casos c a serem analisados. Cada caso começa com
+uma linha com dois números n e m. Estes indicam o número de sistemas estelares (1 ≤ n ≤ 1000) e
+o número de buracos de minhoca (0 ≤ m ≤ 2000). Os sistemas estelares são numerados a partir de 0 (nosso sistema solar)
+até n - 1. Para cada buraco de minhoca, uma linha contendo três números inteiros x, y e t é fornecida. Esses
+números indicam que este buraco de minhoca permite que alguém viaje do sistema estelar numerado x para o
+sistema estelar numerado y, terminando assim t (−1000 ≤ t ≤ 1000) anos no futuro.
+
+SAIDA 
+
+A saída consiste em c linhas, uma linha para cada caso, contendo a palavra 'possível' se for de fato
+possível voltar no tempo indefinidamente, ou "impossível" se isso não for possível com o conjunto de
+sistemas estelares e buracos de minhoca.
+
+EXEMPLO DE SAIDA
+
+possible
+not possible
